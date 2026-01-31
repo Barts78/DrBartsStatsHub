@@ -1,19 +1,47 @@
 ---
 title: "Dr Barts"
-theme: lux
+subtitle: |
+  Football Viz Hub |
+  
+  A home for my **football visualisation work** across **AI UP** and **TMM** pods.
+
+image: /Images/Social_profile.jpg
+
+about:
+  id: edu-exp
+  template: solana
+  image: /Images/Social_profile.png
+  image-width: 9em
+  image-shape: round
+
+theme: 
+        - slate
+        - Matchdash.scss
+
 page-layout: full
 toc: false
 format:
   html:
     smooth-scroll: true
     link-external-newwindow: true
+    logo: https://anfieldindex.com/wp-content/uploads/2016/09/AI-Under-Pressure.png
+    nav-buttons: 
+                  - icon: github
+                    href: https://github.com/Barts78
+                  - icon: linkedin
+                    href: https://www.linkedin.com/in/phil-barter-55500122/
+                  - icon: twitter
+                    href: https://twitter.com/Barts78
+                  - icon: bluesky
+                    href: https://bsky.app/profile/barts78.bsky.social
+
 ---
 
-# Football Viz Hub
+:::: {.about-body}
 
-A home for my **football visualisation work** across **AI UP** and **TMM** pods.
+I am a part time football analysit specialising in the Quarto and R ecosystems.
 
-
+:::
 
 ## Browse by season
 

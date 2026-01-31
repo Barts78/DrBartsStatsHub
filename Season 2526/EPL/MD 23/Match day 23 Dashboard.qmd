@@ -2901,7 +2901,7 @@ MD_MC_Plot <- ggplot(long_prob_matrix, aes(x = as.numeric(Home), y = as.numeric(
 MD_MC_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Match Goals Probality Plot.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Match Goals Probality Plot.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ```{r}
 #| label: Match Result Probablity Plot
@@ -2935,7 +2935,7 @@ MD_MC_Result_Plot <- ggplot(outcome_prob) +
 MD_MC_Result_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Match Result Probablity Plot.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Match Result Probablity Plot.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ## Row {.flow}
 ```{r}
@@ -3378,7 +3378,8 @@ PassConnectiondata <- PassConnections %>%
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: 1st Half passnetwork
+#| title: Home 1st Half passnetwork
+#| label: Home 1st Half passnetwork
 
 
 HomepassPlot1stWD <- plot_passnet_AI(data = plottingData,
@@ -3388,12 +3389,13 @@ HomepassPlot1stWD <- plot_passnet_AI(data = plottingData,
 HomepassPlot1stWD
 
 #save Plot
-ggsave(path = Vizlocation, "Home Passnetwork 1st  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Passnetwork 1st  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
 ```{r}
-#| title: 2nd Half passnetwork
+#| title: home 2nd Half passnetwork
+#| label: Home 2nd Half passnetwork
 
 
 HomepassPlot2ndWD <- plot_passnet_AI(data = plottingData,  
@@ -3403,7 +3405,7 @@ HomepassPlot2ndWD <- plot_passnet_AI(data = plottingData,
 HomepassPlot2ndWD
 
 #save Plot
-ggsave(path = Vizlocation, "Home Passnetwork 2nd  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Passnetwork 2nd  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ``` {r}
 #| title: Passnetwork first Goal 
@@ -3416,7 +3418,8 @@ HomepassPlot20m
 ```
 ### column {.tabset}
 ```{r}
-#| title: 1st Half passnetwork
+#| title: Away 1st Half passnetwork
+#| label: Away 1st Half passnetwork
 
 
 AwaypassPlot1stWD <- plot_passnet_AI(data = plottingData,  
@@ -3426,11 +3429,12 @@ AwaypassPlot1stWD <- plot_passnet_AI(data = plottingData,
 AwaypassPlot1stWD
 
 #save Plot
-ggsave(path = Vizlocation, "Away Passnetwork 1st  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Passnetwork 1st  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
-#| title: 2nd Half passnetwork
+#| title: Away 2nd Half passnetwork
+#| label: Away 2nd Half passnetwork
 
 
 AwaypassPlot2ndWD <- plot_passnet_AI(data = plottingData,  
@@ -3440,7 +3444,7 @@ AwaypassPlot2ndWD <- plot_passnet_AI(data = plottingData,
 AwaypassPlot2ndWD
 
 #save Plot
-ggsave(path = Vizlocation, "Away Passnetwork 2nd  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Passnetwork 2nd  half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ``` {r}
 #| title: Passnetwork First Goal 
@@ -3456,7 +3460,7 @@ AwaypassPlot20m
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: Passnetwork to 1st Sub 
+#| title: Home Passnetwork to 1st Sub 
 #| label: Home 1st subs passnetwork
 HomepassPlot1stsubsWD <- plot_passnet_AI(data = plottingData, 
                                    team_name = Match_Home, scale_stat = "EPV", 
@@ -3465,11 +3469,11 @@ HomepassPlot1stsubsWD <- plot_passnet_AI(data = plottingData,
 HomepassPlot1stsubsWD
 
 #save Plot
-ggsave(path = Vizlocation, "Home Passnetwork 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Passnetwork 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ``` {r}
-#| title: Passnetwork Post 1st Sub 
+#| title: Home Passnetwork Post 1st Sub 
 #| label: Home post 1st subs passnetwork
 HomepassPlotPost1stsubsWD <- plot_passnet_AI(data = plottingData, 
                                         team_name = Match_Home, scale_stat = "EPV", 
@@ -3480,7 +3484,7 @@ HomepassPlotPost1stsubsWD
 
 ### column {.tabset}
 ```{r}
-#| title: Passnetwork to 1st Sub 
+#| title: Away Passnetwork to 1st Sub 
 #| label: Away 1st subs passnetwork
 
 AwaypassPlot1stsubsWD <- plot_passnet_AI(data = plottingData, 
@@ -3490,11 +3494,11 @@ AwaypassPlot1stsubsWD <- plot_passnet_AI(data = plottingData,
 AwaypassPlot1stsubsWD
 
 #save Plot
-ggsave(path = Vizlocation, "Away Passnetwork 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Passnetwork 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ``` {r}
-#| title: Passnetwork post 1st Sub 
+#| title: Away Passnetwork post 1st Sub 
 #| label: Away post 1st subs passnetwork
 AwaypassPlotpost1stsubsWD <- plot_passnet_AI(data = plottingData, 
                                         team_name = Match_Away, scale_stat = "EPV", 
@@ -3505,7 +3509,8 @@ AwaypassPlotpost1stsubsWD
 ## Row {.flow}
 ### column {.tabset}
 ```{r home attack pass 1st}
-#| title: Attacking Passnetwork 1st Half
+#| title: Home Attacking Passnetwork 1st Half
+#| label: Home Attacking Passnetwork 1st Half
 #pass map EPV Home 1st half
 HomepassPlot1stAtt <- plot_passnet_AI(data = plottingData, 
                                   team_name = Match_Home, scale_stat = "EPV", 
@@ -3517,7 +3522,8 @@ HomepassPlot1stAtt
 ```
 
 ```{r home attack pass 2nd}
-#| title: Attacking Passnetwork 2nd Half
+#| title: Home Attacking Passnetwork 2nd Half
+#| label: Home Attacking Passnetwork 2nd Half
 
 #pass map EPV Home 2nd half
 HomepassPlot2ndAtt <- plot_passnet_AI(data = plottingData,
@@ -3529,7 +3535,8 @@ HomepassPlot2ndAtt
 ```
 
 ```{r}
-#| title: Attacking Passnetwork 1st Goal
+#| title: Home Attacking Passnetwork 1st Goal
+#| label: Home Attacking Passnetwork 1st Goal
 
 #pass map EPV Home 2nd half
 HomepassPlot20mA <- plot_passnet_AI(data = plottingData,
@@ -3542,7 +3549,9 @@ HomepassPlot20mA
 
 ### column {.tabset}
 ```{r away attack pass 1st}
-#| title: Attacking Passnetwork 1st Half
+#| title: Away Attacking Passnetwork 1st Half
+#| label: Away Attacking Passnetwork 1st Half
+
 #pass map EPV Away 1st half
 AwaypassPlot1stAtt <- plot_passnet_AI(data = plottingData, 
                                      team_name = Match_Away, scale_stat = "EPV", 
@@ -3553,7 +3562,9 @@ AwaypassPlot1stAtt
 ```
 
 ```{r away attack pass 2nd}
-#| title: Attacking Passnetwork 2nd Half
+#| title: Away Attacking Passnetwork 2nd Half
+#| label: Away Attacking Passnetwork 2nd Half
+
 #pass map EPV Away 2nd half
 AwaypassPlot2ndAtt <- plot_passnet_AI(data = plottingData,
                                      team_name = Match_Away, scale_stat = "EPV", 
@@ -3563,7 +3574,9 @@ AwaypassPlot2ndAtt
 
 ```
 ```{r}
-#| title: Attacking Passnetwork 1st Goal
+#| title: Away Attacking Passnetwork 1st Goal
+#| label: Away Attacking Passnetwork 1st Goal
+
 #pass map EPV Away 2nd half
 AwaypassPlot2ndAtt20m <- plot_passnet_AI(data = plottingData,
                                      team_name = Match_Away, scale_stat = "EPV", 
@@ -3575,7 +3588,9 @@ AwaypassPlot2ndAtt20m
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: Attacking Passnetwork 1st Sub
+#| title: Home Attacking Passnetwork 1st Sub
+#| label: Home Attacking Passnetwork 1st Sub
+
 #pass map EPV Home 1st sub
 HomepassPlot1subAtt <- plot_passnet_AI(data = plottingData,  
                                     team_name = Match_Home, scale_stat = "EPV", 
@@ -3586,7 +3601,9 @@ HomepassPlot1subAtt
 ```
 
 ```{r}
-#| title: Attacking Passnetwork Post 1st Sub
+#| title: Home Attacking Passnetwork Post 1st Sub
+#| label: Home Attacking Passnetwork Post 1st Sub
+
 #pass map EPV Home 1st sub
 HomepassPlot1subAttpost <- plot_passnet_AI(data = plottingData,  
                                     team_name = Match_Home, scale_stat = "EPV", 
@@ -3597,7 +3614,9 @@ HomepassPlot1subAttpost
 ```
 ### column {.tabset}
 ```{r}
-#| title: Attacking Passnetwork 1st Sub
+#| title: Away Attacking Passnetwork 1st Sub
+#| label: Away Attacking Passnetwork 1st Sub
+
 #pass map EPV Away 1st Sub
 AwaypassPlot1SubAtt <- plot_passnet_AI(data = plottingData,
                                       team_name = Match_Away, scale_stat = "EPV", 
@@ -3608,7 +3627,9 @@ AwaypassPlot1SubAtt
 ```
 
 ```{r}
-#| title: Attacking Passnetwork Post 1st Sub
+#| title: Away Attacking Passnetwork Post 1st Sub
+#| label: Away Attacking Passnetwork Post 1st Sub
+
 #pass map EPV Away 1st Sub
 AwaypassPlot1SubAttpost <- plot_passnet_AI(data = plottingData,
                                       team_name = Match_Away, scale_stat = "EPV", 
@@ -3621,7 +3642,7 @@ AwaypassPlot1SubAttpost
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: Passnetwork - By Game Period
+#| title: Home Passnetwork - By Game Period
 HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                       team_name = Match_Home, scale_stat = "EPV", 
                                       scale_color = Color_Home,  text_color = Color_Home_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3629,7 +3650,7 @@ HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,
 HomepassPlotFTAttW
 ```
 ```{r}
-#| title: Passnetwork - By Game Quarter
+#| title: Home Passnetwork - By Game Quarter
 HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                       team_name = Match_Home, scale_stat = "EPV", 
                                       scale_color = Color_Home,  text_color = Color_Home_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3638,7 +3659,7 @@ HomepassPlotFTAttW
 ```
 
 ```{r}
-#| title: Attacking Passnetwork - By Game Period
+#| title: Home Attacking Passnetwork - By Game Period
 HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                       team_name = Match_Home, scale_stat = "EPV", 
                                       scale_color = Color_Home,  text_color = Color_Home_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3646,7 +3667,7 @@ HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,
 HomepassPlotFTAttW
 ```
 ```{r}
-#| title: Attacking Passnetwork - By Game Quarter
+#| title: Home Attacking Passnetwork - By Game Quarter
 HomepassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                       team_name = Match_Home, scale_stat = "EPV", 
                                       scale_color = Color_Home,  text_color = Color_Home_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3656,7 +3677,7 @@ HomepassPlotFTAttW
 
 ### column {.tabset}
 ```{r}
-#| title: Passnetwork - By Game Period
+#| title: Away Passnetwork - By Game Period
 AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                      team_name = Match_Away, scale_stat = "EPV", 
                                      scale_color = Color_Away,  text_color = Color_Away_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3664,7 +3685,7 @@ AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,
 AwaypassPlotFTAttW
 ```
 ```{r}
-#| title: Passnetwork - By Game Quarter
+#| title: Away Passnetwork - By Game Quarter
 AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                      team_name = Match_Away, scale_stat = "EPV", 
                                      scale_color = Color_Away,  text_color = Color_Away_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3672,7 +3693,7 @@ AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,
 AwaypassPlotFTAttW
 ```
 ```{r}
-#| title: Attacking Passnetwork - By Game Period
+#| title: Away Attacking Passnetwork - By Game Period
 AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                      team_name = Match_Away, scale_stat = "EPV", 
                                      scale_color = Color_Away,  text_color = Color_Away_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3680,7 +3701,7 @@ AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,
 AwaypassPlotFTAttW
 ```
 ```{r}
-#| title: Attacking Passnetwork - By Game Quarter
+#| title: Away Attacking Passnetwork - By Game Quarter
 AwaypassPlotFTAttW <- plot_passnet_AI(data = plottingData,  
                                      team_name = Match_Away, scale_stat = "EPV", 
                                      scale_color = Color_Away,  text_color = Color_Away_Text, subtitle = paste0(Match_Fixture, " By Time Period"),
@@ -3999,7 +4020,9 @@ PassConnectionTreeAwayPlot
 
 # Passing Analysis
 ## Row {.flow}
-```{r home wave plot}
+```{r}
+#| label:  home wave plot
+#| title:  home wave plot
 touchpass_bar_data <- plottingData 
 
 touchpass_bar_data <- touchpass_bar_data %>%
@@ -4064,7 +4087,9 @@ touchpass_bar_plot <- touchpass_bar_data %>%
 touchpass_bar_plot
 ```
 
-```{r Away waves plot}
+```{r}
+#| label:  Away wave plot
+#| title:  Away wave plot
 Awaytouchpass_bar_data <- plottingData 
 
 Awaytouchpass_bar_data <- Awaytouchpass_bar_data %>%
@@ -4294,7 +4319,7 @@ passing_sequencesAway_2nd_Table <- passing_sequencesAway_2nd_Table %>%
 
 ## Row {.flow}
 ```{r}
-#| label: passing chains all in
+#| label: Home passing chains all in
 
 passing_sequencesHome_Plot <- passing_sequencesHome %>%
   ggplot(aes(x = x, y = y, group = Pchain)) +
@@ -4737,7 +4762,8 @@ Z14_HS_Passes_Away_Data <- Z14_HS_Passes_Away_Data %>%
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: By half
+#| title: Home Z14 RS By Half
+#| label: Home Z14 RS By Half
 Zone14_HS_Passes_Home_Plot <- Z14_HS_Passes_Home_Data %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#95A5A6") +
@@ -4783,11 +4809,13 @@ Zone14_HS_Passes_Home_Plot <- Z14_HS_Passes_Home_Data %>%
 Zone14_HS_Passes_Home_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Home Z14 and HS plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Z14 and HS plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
-#| title: By Game Period
+#| title: Home Z14 RS By Game Period
+#| label: Home Z14 RS By Game Period
+
 Zone14_HS_Passes_Home_Plot <- Z14_HS_Passes_Home_Data %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#95A5A6") +
@@ -4833,13 +4861,15 @@ Zone14_HS_Passes_Home_Plot <- Z14_HS_Passes_Home_Data %>%
 Zone14_HS_Passes_Home_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Home Z14 and HS plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Z14 and HS plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 
 ### column {.tabset}
 ```{r}
-#| title: By Half
+#| title: Away Z14 RS By Half
+#| label: Away Z14 RS By Half
+
 Zone14_HS_Passes_Away_Plot <- Z14_HS_Passes_Away_Data %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#95A5A6") +
@@ -4883,11 +4913,12 @@ Zone14_HS_Passes_Away_Plot <- Z14_HS_Passes_Away_Data %>%
 Zone14_HS_Passes_Away_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Away Z14 and HS plot by Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Z14 and HS plot by Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
-#| title: By Game Period
+#| title: Away Z14 RS By Game Period
+#| label: Away Z14 RS By Game Period
 Zone14_HS_Passes_Away_Plot <- Z14_HS_Passes_Away_Data %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#95A5A6") +
@@ -4931,7 +4962,7 @@ Zone14_HS_Passes_Away_Plot <- Z14_HS_Passes_Away_Data %>%
 Zone14_HS_Passes_Away_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Away Z14 and HS plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Z14 and HS plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ## Row {.flow}
@@ -4967,7 +4998,8 @@ AwayLPsTitle_textGP <- paste0(
 ```{r}
 #| out-height: 100%
 #| out-width: 100%
-#| title: By half
+#| title: Home Long Passes By half
+#| label: Home Long Passes By half
 Long_Passes_Home_Plot <- Long_Passes_Data %>%
     filter(TeamName == Match_Home ,
            Corners == 0,
@@ -5015,12 +5047,13 @@ Long_Passes_Home_Plot <- Long_Passes_Data %>%
 Long_Passes_Home_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Home Crosses and Long pass plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Crosses and Long pass plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
 ```{r}
-#| title: By Game Period
+#| title: Home Long Passes By Game Period
+#| label: Home Long Passes By Game Period
 Long_Passes_Home_Plot <- Long_Passes_Data %>%
     filter(TeamName == Match_Home,
            Short_Corners == 0,
@@ -5068,14 +5101,15 @@ Long_Passes_Home_Plot <- Long_Passes_Data %>%
 Long_Passes_Home_Plot
 
 #save Plot
-ggsave(path = Vizlocation, "Home Crosses and Long pass plot by game period.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Crosses and Long pass plot by game period.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ### column {.tabset}
 ``` {r}
 #| out-height: 100%
 #| out-width: 100%
-#| title: By Half
+#| title: Away Long Passes By Half
+#| label: Away Long Passes By Half
 Long_Passes_Away_Plot <- Long_Passes_Data %>%
     filter(TeamName == Match_Away,
            Corners == 0,
@@ -5125,14 +5159,15 @@ Long_Passes_Away_Plot
 
 
 #save Plot
-ggsave(path = Vizlocation, "Away Crosses and Long pass plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Crosses and Long pass plot by half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
 ``` {r}
 #| out-height: 100%
 #| out-width: 100%
-#| title: By Game period
+#| title: Away Long Passes By Game period
+#| label: Away Long Passes By Game period
 Long_Passes_Away_Plot <- Long_Passes_Data %>%
     filter(TeamName == Match_Away, 
            Short_Corners == 0,
@@ -5182,13 +5217,14 @@ Long_Passes_Away_Plot
 
 
 #save Plot
-ggsave(path = Vizlocation, "Away Crosses and Long pass plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
+##ggsave(path = Vizlocation, "Away Crosses and Long pass plot by period.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ## Row
 ### column {.tabset}
 ```{r}
-#| title: 1st Half Pass Recieving Areas
+#| title: Home 1st Half Pass Recieving Areas
+#| label: Home 1st Half Pass Recieving Areas
 
 HomePRecievedHeatMapplot1Half <- plottingData %>%
   filter(Successful_Passes == 1,
@@ -5233,7 +5269,8 @@ HomePRecievedHeatMapplot1Half
 
 ```
 ```{r}
-#| title: 2nd Half Pass Recieving Areas
+#| title: Home 2nd Half Pass Recieving Areas
+#| label: Home 2nd Half Pass Recieving Areas
 HomePRecievedHeatMapplot2Half <- plottingData %>%
   filter(Successful_Passes == 1,
          Short_Corners == 0,
@@ -5279,7 +5316,8 @@ HomePRecievedHeatMapplot2Half
 
 ```
 ```{r}
-#| title: Up to 1st Sub Pass Recieving Areas
+#| title: Home Up to 1st Sub Pass Recieving Areas
+#| label: Home Up to 1st Sub Pass Recieving Areas
 
 HomePRecievedHeatMapplot1Sub <- plottingData %>%
   filter(Successful_Passes == 1,
@@ -5324,7 +5362,9 @@ HomePRecievedHeatMapplot1Sub
 ```
 ### column {.tabset}
 ```{r}
-#| title: 1st Half Pass Recieving Areas
+#| title: Away 1st Half Pass Recieving Areas
+#| label: Away 1st Half Pass Recieving Areas
+
 AwayPRecievedHeatMapplot1Half <- plottingData %>%
   filter(Successful_Passes == 1,
          Short_Corners == 0,
@@ -5366,7 +5406,8 @@ AwayPRecievedHeatMapplot1Half <- plottingData %>%
 AwayPRecievedHeatMapplot1Half
 ```
 ```{r}
-#| title: 2nd Half Pass Recieving Areas
+#| title: Away 2nd Half Pass Recieving Areas
+#| label: Away 2nd Half Pass Recieving Areas
 
 AwayPRecievedHeatMapplot2Half <- plottingData %>%
   filter(Successful_Passes == 1,
@@ -5412,7 +5453,8 @@ AwayPRecievedHeatMapplot2Half
 
 ```
 ```{r}
-#| title: Up to 1st Sub Pass Recieving Areas
+#| title: Away Up to 1st Sub Pass Recieving Areas
+#| label: Away Up to 1st Sub Pass Recieving Areas
 
 AwayPRecievedHeatMapplot1Sub <- plottingData %>%
   filter(Attempted_Passes == 1,
@@ -7293,7 +7335,7 @@ HometouchPlot1Sub <- TouchTeamPlot_OPTA(HomeTeamTouchData,  title = paste0(Match
 HometouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+##ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7308,7 +7350,7 @@ HometouchPlot1Sub <- TouchTeamPlot_OPTA(HomeTeamTouchData,  title = paste0(Match
 HometouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7323,7 +7365,7 @@ HometouchPlot1Sub <- TouchTeamPlot_OPTA(HomeTeamTouchData,  title = paste0(Match
 HometouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team On Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7353,7 +7395,7 @@ AwaytouchPlot1Sub <- TouchTeamPlot_OPTA(AwayTeamTouchData,  title = paste0(Match
 AwaytouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7368,7 +7410,7 @@ AwaytouchPlot1Sub <- TouchTeamPlot_OPTA(AwayTeamTouchData,  title = paste0(Match
 AwaytouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7383,7 +7425,7 @@ AwaytouchPlot1Sub <- TouchTeamPlot_OPTA(AwayTeamTouchData,  title = paste0(Match
 AwaytouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -7391,7 +7433,8 @@ ggsave(path = Vizlocation, "Away Team On Ball Touch Zones 2nd Half.png", width =
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: Dribbles by Game Period
+#| title: Home Dribbles by Game Period
+#| label: Home Dribbles by Game Period
 #| height: 100%
 HomeDribblesPlotT <- HomeDribblesmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
@@ -7433,7 +7476,8 @@ HomeDribblesPlotT
 ```
 
 ```{r}
-#| title: Dules by Game Period
+#| title: Home Dules by Game Period
+#| label: Home Dules by Game Period
 #| height: 100%
 HomeDulesPlotT <- HomeDuelsmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
@@ -7477,7 +7521,8 @@ HomeDulesPlotT
 ### column {.tabset}
 
 ```{r}
-#| title: Dribbles by Game Period
+#| title: Away Dribbles by Game Period
+#| label: Away Dribbles by Game Period
 #| height: 100%
 AwayDribblesPlotT <- AwayDribblesmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
@@ -7518,7 +7563,8 @@ AwayDribblesPlotT
 
 ```
 ```{r}
-#| title: Duels by Game Period
+#| title: Away Duels by Game Period
+#| label: Away Duels by Game Period
 #| height: 100%
 AwayDulesPlotT <- AwayDuelsmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
@@ -7563,7 +7609,8 @@ AwayDulesPlotT
 ### column {.tabset}
 ```{r}
 #| height: 100%
-#| title: Dribbles by Player
+#| title: Away Dribbles by Player
+#| label: Away Dribbles by Player
 HomeDribblesPlotP <- HomeDribblesmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
   
@@ -7605,7 +7652,7 @@ HomeDribblesPlotP
 
 ```{r}
 #| height: 100%
-#| title: Duels by Player
+#| title: Home Duels by Player
 #| label: Home Duels plot by player
 #canvas
 HomeDulesPlotP <- HomeDuelsmapdata %>%
@@ -7648,7 +7695,8 @@ HomeDulesPlotP
 ### column {.tabset}
 ```{r}
 #| height: 100%
-#| title: Dribbles by Player
+#| title: Away Dribbles by Player
+#| label: Away Dribbles by Player
 AwayDribblesPlotP <- AwayDribblesmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
   
@@ -7689,7 +7737,8 @@ AwayDribblesPlotP
 
 ```{r}
 #| height: 100%
-#| title: Duels by Player
+#| title: Away Duels by Player
+#| label: Away Duels by Player
 AwayDulesPlotP <- AwayDuelsmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
   
@@ -7731,7 +7780,8 @@ AwayDulesPlotP
 ## Row {.flow}
 ### column {.tabset}
 ```{r}
-#| title: Whole Team
+#| title: Home Whole Team
+#| label: Home Whole Team
 
 Player_Summary_Plot_Home <- Player_Summary_data_Home %>% 
   ggplot() +
@@ -7796,7 +7846,8 @@ Player_Summary_Plot_Home
 ```
 
 ```{r}
-#| title: Defenders
+#| title: Home Defenders
+#| label: Home Defenders
 
 Player_Summary_Plot_Home <- Player_Summary_data_Home %>% 
   filter(role == "Defender") %>%
@@ -7860,7 +7911,8 @@ Player_Summary_Plot_Home
 
 ```
 ```{r}
-#| title: Midfielders
+#| title: Home Midfielders
+#| label: Home Midfielders
 
 Player_Summary_Plot_Home <- Player_Summary_data_Home %>% 
   filter(role == "Midfielder") %>%
@@ -7924,7 +7976,8 @@ Player_Summary_Plot_Home
 
 ```
 ```{r}
-#| title: Forwards
+#| title: Home Forwards
+#| label: Home Forwards
 
 Player_Summary_Plot_Home <- Player_Summary_data_Home %>% 
   filter(role == "Forward") %>%
@@ -7990,7 +8043,8 @@ Player_Summary_Plot_Home
 
 ### column {.tabset}
 ```{r}
-#| title: Whole team
+#| title: Away Whole team
+#| label: Away Whole team
 #| out-height: 100%
 #| out-width: 100%
 
@@ -8062,7 +8116,8 @@ Player_Summary_Plot_Away
 
 ```
 ```{r}
-#| title: Defenders
+#| title: Away Defenders
+#| label: Away Defenders
 
 Player_Summary_Plot_Away <- Player_Summary_data_Away %>% 
   filter(role == "Defender") %>%
@@ -8127,7 +8182,8 @@ Player_Summary_Plot_Away
 
 ```
 ```{r}
-#| title: Midfielders
+#| title: Away Midfielders
+#| label: Away Midfielders
 #| out-height: 100%
 #| out-width: 100%
 
@@ -8195,7 +8251,8 @@ Player_Summary_Plot_Away
 
 ```
 ```{r}
-#| title: Forwards
+#| title: Away Forwards
+#| label: Away Forwards
 #| out-height: 100%
 #| out-width: 100%
 
@@ -8406,7 +8463,7 @@ Player_Summary_Plot_Away
 # Threat Analysis
 ```{r}
 #| output: false
-#| label: EPV Time Data setup
+#| label: Home EPV Time Data setup
 #| echo: false
 #set final plot data frame
 
@@ -8483,7 +8540,7 @@ EPVdfAway <- AwayEPVPlotData %>%
 ```{r}
 #| output: false
 #| echo: false
-#| label: EPV Area Setup
+#| label: Home EPV Area Setup
 #EPV Development area  plot Opta data
 #data wrangling
 EPVAreaPlotData <- plottingData
@@ -8532,6 +8589,7 @@ AwayEPVAreaPlotData <- AwayEPVAreaPlotData %>%
 ## Row {.flow}
 ```{r}
 #| height: 100%
+#| label: Home EPV Plot
 EPVTimePlot <- EPVPlotData %>%
 #canvas
   ggplot(aes(x = expandedMinute, y = Home_Cumalative_EPV)) +
@@ -8572,6 +8630,7 @@ EPVTimePlot
 
 ```{r} 
 #| height: 100%
+#| label: Away EPV Plot
 #set final plot data frame
 AwayEPVTimePlot <- AwayEPVPlotData %>%
   
@@ -8817,6 +8876,7 @@ Awayaverage_epvNZFT <- Awayaverage_epvNZFT %>%
 ## Row {.flow}
 ```{r}
 #| height: 100%
+#| label: Home EPV plot FT
 EPVHeatMapplotFT <- EPVHeatMapDataFT %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#454545") +
@@ -8863,6 +8923,7 @@ EPVHeatMapplotFT
 
 ```{r}
 #| height: 100%
+#| label: Away EPV plot FT
 AwayEPVHeatMapplotFT <- AwayEPVHeatMapDataFT %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#454545") +
@@ -9315,7 +9376,7 @@ Awayaverage_epvNZ2H <- Awayaverage_epvNZ2H %>%
 ### column {.tabset}
 ```{r}
 #| height: 100%
-#| title: Threat 1st Half
+#| title: Home Threat 1st Half
 
 EPVHeatMapplot1H <- EPVHeatMapData1H %>%
   ggplot(aes(x = x, y = y)) +
@@ -9360,13 +9421,13 @@ EPVHeatMapplot1H <- EPVHeatMapData1H %>%
 EPVHeatMapplot1H
 
 #save Plot
-ggsave(path = Vizlocation, "Home EPV Heat Map 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home EPV Heat Map 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
 ```{r}
 #| height: 100%
-#| title: Threat 2nd Half
+#| title: Home Threat 2nd Half
 
 EPVHeatMapplot2H <- EPVHeatMapData2H %>%
   ggplot(aes(x = x, y = y)) +
@@ -9411,14 +9472,14 @@ EPVHeatMapplot2H <- EPVHeatMapData2H %>%
 EPVHeatMapplot2H
 
 #save Plot
-ggsave(path = Vizlocation, "Home EPV Heat Map 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home EPV Heat Map 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
 ### column {.tabset}
 ```{r}
 #| height: 100%
-#| title: Threat 1st Half
+#| title: Away Threat 1st Half
 AwayEPVHeatMapplot1H <- AwayEPVHeatMapData1H %>%
   ggplot(aes(x = x, y = y)) +
   annotate_pitch(dimensions = pitch_opta, fill = "#E5E5E5", colour = "#454545") +
@@ -9461,7 +9522,7 @@ AwayEPVHeatMapplot1H <- AwayEPVHeatMapData1H %>%
 AwayEPVHeatMapplot1H
 
 #save Plot
-ggsave(path = Vizlocation, "Away EPV Heat Map 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away EPV Heat Map 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -9508,7 +9569,7 @@ AwayEPVHeatMapplot2H <- AwayEPVHeatMapData2H %>%
 AwayEPVHeatMapplot2H
 
 #save Plot
-ggsave(path = Vizlocation, "Away EPV Heat Map 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away EPV Heat Map 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ## Row {.flow}
@@ -9559,7 +9620,7 @@ EPVHeatMapplot1sub <- EPVHeatMapData1sub %>%
 EPVHeatMapplot1sub
 
 #save Plot
-ggsave(path = Vizlocation, "Home EPV Heat Map 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home EPV Heat Map 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
@@ -9656,7 +9717,7 @@ AwayEPVHeatMapplot1sub <- AwayEPVHeatMapData1sub %>%
 AwayEPVHeatMapplot1sub
 
 #save Plot
-ggsave(path = Vizlocation, "Away EPV Heat Map 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away EPV Heat Map 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
@@ -11149,7 +11210,7 @@ HomePPDAHeatMapplot1H <- HomePPDAHeatMapData1H %>%
 HomePPDAHeatMapplot1H
 
 #save Plot
-ggsave(path = Vizlocation, "Home DA Heat map 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home DA Heat map 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -11200,7 +11261,7 @@ HomePPDAHeatMapplot2H <- HomePPDAHeatMapData2H %>%
 HomePPDAHeatMapplot2H
 
 #save Plot
-ggsave(path = Vizlocation, "Home DA Heat map 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home DA Heat map 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -11251,7 +11312,7 @@ AwayPPDAHeatMapplot1H <- AwayPPDAHeatMapData1H %>%
 AwayPPDAHeatMapplot1H
 
 #save Plot
-ggsave(path = Vizlocation, "Away DA Heat map 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away DA Heat map 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -11301,7 +11362,7 @@ AwayPPDAHeatMapplot2H <- AwayPPDAHeatMapData2H %>%
 AwayPPDAHeatMapplot2H
 
 #save Plot
-ggsave(path = Vizlocation, "Away DA Heat map 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away DA Heat map 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -11855,7 +11916,7 @@ HomeSuccessful_DA_table
 
 
 #save Plot
-ggsave(path = Vizlocation, "Home Post PD 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Post PD 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -11922,7 +11983,7 @@ HomePostPPDAHeatMapplot2nd
 HomeSuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Home Post PD 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Post PD 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -12013,7 +12074,7 @@ AwaySuccessful_DA_table<- Away_Successful_DA_table %>%
 AwaySuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Away Post PD 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Post PD 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
@@ -12079,7 +12140,7 @@ AwayPostPPDAHeatMapplot2nd
 AwaySuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Away Post PD 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Post PD 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ## Row
 ### column {.tabset}
@@ -12170,7 +12231,7 @@ HomeUnSuccessful_DA_table <- Home_UnSuccessful_DA_table %>%
 HomeUnSuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Home Post PD Oppo 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Post PD Oppo 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -12238,7 +12299,7 @@ HomeUNPostPPDAHeatMapplot2nd
 HomeUnSuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Home Post PD OPPO 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Post PD OPPO 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -12330,7 +12391,7 @@ AwayUnSuccessful_DA_table<- Away_UnSuccessful_DA_table %>%
 AwayUnSuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Away Post PD Oppo 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Post PD Oppo 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 
 ```{r}
@@ -12400,7 +12461,7 @@ AwayPostPPDAHeatMapplot2nd
 AwayUnSuccessful_DA_table
 
 #save Plot
-ggsave(path = Vizlocation, "Away Post PD Oppo 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Post PD Oppo 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 ```
 ## Row
 ```{r}
@@ -12653,7 +12714,7 @@ HometouchPlot1Sub <- TouchTeamPlot_OPTA(HomePPDAHeatMapData,  title = paste0(Mat
 HometouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -12667,7 +12728,7 @@ HometouchPlot1half <- TouchTeamPlot_OPTA(HomePPDAHeatMapData,  title = paste0(Ma
 HometouchPlot1half
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 1st Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -12681,7 +12742,7 @@ HometouchPlot2half <- TouchTeamPlot_OPTA(HomePPDAHeatMapData,  title = paste0(Ma
 HometouchPlot2half
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team Off Ball Touch Zones 2nd Half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -12696,7 +12757,7 @@ AwaytouchPlot1Sub <- TouchTeamPlot_OPTA(AwayPPDAHeatMapData,  title = paste0(Mat
 AwaytouchPlot1Sub
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 1st Sub.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -12709,7 +12770,7 @@ AwaytouchPlot1half <- TouchTeamPlot_OPTA(AwayPPDAHeatMapData,  title = paste0(Ma
 AwaytouchPlot1half
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 1st half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 ```{r}
@@ -12722,7 +12783,7 @@ AwaytouchPlot2half <- TouchTeamPlot_OPTA(AwayPPDAHeatMapData,  title = paste0(Ma
 AwaytouchPlot2half
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team Off Ball Touch Zones 2nd half.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 ```
 
@@ -12773,8 +12834,8 @@ Awaydashboard_data <- Awaydashboard_data %>%
 
 ## Row
 
-```{r home xG line}
-
+```{r}
+#| label: home xG line
 # Line Plot
 
   xGLinePlot <- dashboard_data %>%
@@ -12819,7 +12880,8 @@ xGLinePlot
 
 ```
 
-```{r away xG line}
+```{r}
+#| label: Away xG line
 # Line Plot
 #canvas
 xGLinePlotAway <- Awaydashboard_data %>%
@@ -12866,7 +12928,8 @@ xGLinePlotAway
 
 ## Row
 
-```{r home density plot}
+```{r}
+#| label: home density plot
 
 # Density Shot Map
 #canvas
@@ -12923,7 +12986,8 @@ xGDensityPlot
 
 ```
 
-```{r away density plot}
+```{r}
+#| label:  Away density plot
 
 # Density Shot Map
 
@@ -12986,6 +13050,7 @@ xGDensityPlotAway
 ## Row
 
 ```{r home bubble plot}
+#| lable: home bubble plot
 
 ShotBubblexG_data <- plottingData 
 
@@ -13084,6 +13149,7 @@ xGBubble_Plot_I
 ```
 
 ```{r away bubble plot}
+#| label: away bubble plot
 
 AwayShotBubblexG_data <- plottingData 
 
@@ -13467,7 +13533,7 @@ xGSituationBarAway_I
 Home_S_plot <- plot_shot_AI(dashboard_data, highlight_goals = TRUE, average_location = FALSE, mapType = "Team", mapName = Match_Home, teamColor = Color_Home, text_color = Color_Home_Text, matchDate = Game_date, matchFixture = Match_Fixture, dataSource = "Opta", logo = "", wrap = "")
 
 #save Plot
-ggsave(path = Vizlocation, "Home Team Shot Map.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Home Team Shot Map.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 Home_S_plot_I <- ggplotly(Home_S_plot, tooltip = "text")
 
@@ -13526,7 +13592,7 @@ Home_S_plotWT_I
 Away_S_plot <- plot_shot_AI(Awaydashboard_data, highlight_goals = TRUE, average_location = FALSE, mapType = "Team",  mapName = Match_Away, teamColor = Color_Away, matchDate = Game_date, matchFixture = Match_Fixture, dataSource = "Opta")
 
 #save Plot
-ggsave(path = Vizlocation, "Away Team Shot Map.png", width = 2500, height = 2150, units = "px", dpi = 400)
+#ggsave(path = Vizlocation, "Away Team Shot Map.png", width = 2500, height = 2150, units = "px", dpi = 400)
 
 Away_S_plot_I <- ggplotly(Away_S_plot, tooltip = "text")
 
