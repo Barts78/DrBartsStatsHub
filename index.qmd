@@ -1,7 +1,7 @@
 ---
 title: "Dr Barts"
 subtitle: |
-  Football Viz Hub |
+  Football Viz Hub
   
   A home for my **football visualisation work** across **AI UP** and **TMM** pods.
 
