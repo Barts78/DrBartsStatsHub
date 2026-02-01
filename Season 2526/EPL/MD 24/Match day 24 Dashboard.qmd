@@ -3506,7 +3506,7 @@ AwaypassPlotpost1stsubsWD
 ```
 ## Row {.flow}
 ### column {.tabset}
-```{r home attack pass 1st}
+```{r}
 #| title: Home Attacking Passnetwork 1st Half
 #| label: Home Attacking Passnetwork 1st Half
 #pass map EPV Home 1st half
@@ -3519,7 +3519,7 @@ HomepassPlot1stAtt
 
 ```
 
-```{r home attack pass 2nd}
+```{r}
 #| title: Home Attacking Passnetwork 2nd Half
 #| label: Home Attacking Passnetwork 2nd Half
 
@@ -3546,7 +3546,7 @@ HomepassPlot20mA
 ```
 
 ### column {.tabset}
-```{r away attack pass 1st}
+```{r}
 #| title: Away Attacking Passnetwork 1st Half
 #| label: Away Attacking Passnetwork 1st Half
 
@@ -3559,7 +3559,7 @@ AwaypassPlot1stAtt
 
 ```
 
-```{r away attack pass 2nd}
+```{r}
 #| title: Away Attacking Passnetwork 2nd Half
 #| label: Away Attacking Passnetwork 2nd Half
 
@@ -7607,8 +7607,8 @@ AwayDulesPlotT
 ### column {.tabset}
 ```{r}
 #| height: 100%
-#| title: Away Dribbles by Player
-#| label: Away Dribbles by Player
+#| title: Home Dribbles by Player
+#| label: Home Dribbles by Player
 HomeDribblesPlotP <- HomeDribblesmapdata %>%
   ggplot(aes(x = x, y = y, group = Game_Period)) +
   
