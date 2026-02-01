@@ -5,46 +5,43 @@ subtitle: |
   
   A home for my **football visualisation work** across **AI UP** and **TMM** pods.
 
+image: Images/Social_profile.png
+
 about:
-    template: trestles
-    links:
-        - icon: linkedin
-          text: LinkedIn
-          url: https://www.linkedin.com/in/phil-barter-55500122/
-        - icon: twitter
-          text: Twitter
-          url: https://twitter.com/Barts78
-        - icon: github
-          text: Github
-          url: https://github.com/Barts78
-        - icon: bluesky
-          text: bluesky
-          url: https://bsky.app/profile/barts78.bsky.social
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/phil-barter-55500122/
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/Barts78
+    - icon: github
+      text: GitHub
+      href: https://github.com/Barts78
+    - icon: link-45deg
+      text: Bluesky
+      href: https://bsky.app/profile/barts78.bsky.social
 
-image: /Images/Social_profile.png
+theme:
+  - slate
+  - Matchdash.scss
 
-theme: 
-        - slate
-        - Matchdash.scss
+sidebar: false
+toc: false
 
-#page-layout: full
-#toc: false
-#format:
-#  html:
-#    smooth-scroll: true
-#    link-external-newwindow: true
-#    logo: https://anfieldindex.com/wp-content/uploads/2016/09/AI-Under-Pressure.png
-
+format:
+  html:
+    page-layout: full
+    smooth-scroll: true
+    logo: https://anfieldindex.com/wp-content/uploads/2016/09/AI-Under-Pressure.png
 ---
 
-:::: {.about-body}
-
-I am a part time football analysit specialising in the Quarto and R ecosystems.
-
+::: {.about-contents}
+I am a part time football analyst specialising in the Quarto and R ecosystems.
 :::
 
 ## Browse by season
-
 
 ```{r}
 #| echo: false
