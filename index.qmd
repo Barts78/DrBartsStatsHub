@@ -2,7 +2,7 @@
 title: "Dr Barts"
 subtitle: |
   Football Stats Hub
-image: /Images/Social_profile.png
+image: https://barts78.github.io/DrBartsStatsHub/Images/Social_profile.png
 format:
   html:
     grid:
@@ -10,7 +10,7 @@ format:
 about:
   id: edu-exp
   template: solana
-  image: /Images/Social_profile.png
+  image: https://barts78.github.io/DrBartsStatsHub/Images/Social_profile.png
   image-width: 9em
   image-shape: round
   links:
@@ -60,6 +60,7 @@ I am a part time football analyst specialising in the Quarto and R ecosystems.
 This is a home for my **football visualisation work** across **AI UP** and **TMM** pods.
 :::
 
+
 ## Browse by season
 
 ```{r}
@@ -81,4 +82,3 @@ cat(paste(links, collapse = "\n"), "\n")
 ```
 
 <!-- ## [Season 25-26](Season%202526/) -->
-::::
