@@ -2,7 +2,7 @@
 title: "Dr Barts"
 subtitle: |
   Football Stats Hub
-image: /Images/Social_profile.png
+image: https://barts78.github.io/DrBartsStatsHub/Images/Social_profile.png
 format:
   html:
     grid:
@@ -10,7 +10,7 @@ format:
 about:
   id: edu-exp
   template: solana
-  image: /Images/Social_profile.png
+  image: https://barts78.github.io/DrBartsStatsHub/Images/Social_profile.png
   image-width: 9em
   image-shape: round
   links:
