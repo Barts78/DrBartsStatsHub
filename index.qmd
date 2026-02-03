@@ -36,7 +36,7 @@ I am a part time football analyst specialising in the Quarto and R ecosystems.
 
 ::: {.bio-card}
 <div class="bio-title"><b>Bio</b></div>
-This is a home for my **football visualisation work** across **AI UP** and **TMM** pods.
+This is a home for my football visualisation work across **AI UP** and **TMM** pods.
 :::
 
 ## Browse by season
@@ -54,7 +54,7 @@ season_dirs <- season_dirs[grepl("^Season\\s+\\d+$", season_dirs)]
 season_dirs <- sort(season_dirs)
 
 # Pick a thumbnail. You can swap per-season later if you want.
-thumb <- "Images/Social_profile.png"
+thumb <- "Images/Premier-League-ball.png"
 
 # Build cards
 cards <- vapply(season_dirs, function(season) {
