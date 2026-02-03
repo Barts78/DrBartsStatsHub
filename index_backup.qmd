@@ -1,0 +1,87 @@
+---
+title: "Dr Barts"
+subtitle: |
+  Football Stats Hub
+image: /Images/Social_profile.png
+format:
+  html:
+    grid:
+      body-width: 800px
+about:
+  id: edu-exp
+  template: solana
+  image: /Images/Social_profile.png
+  image-width: 9em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/phil-barter-55500122/
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/Barts78
+    - icon: github
+      text: GitHub
+      href: https://github.com/Barts78
+    - icon: link-45deg
+      text: Bluesky
+      href: https://bsky.app/profile/barts78.bsky.social
+theme:
+  - slate
+  - Matchdash.scss
+
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+cat('
+<figure class="figure">
+  <img src="images/Social_profile.png" width="188" class="figure-img img-fluid rounded-circle">
+  <figcaption class="figure-caption text-center">
+')
+
+cat('
+  </figcaption>
+</figure>
+')
+
+```
+
+:::: about-body
+I am a part time football analyst specialising in the Quarto and R ecosystems.
+
+::: highlight
+This is a home for my **football visualisation work** across **AI UP** and **TMM** pods.
+:::
+
+::: {#edu-exp}
+
+:::
+
+
+
+## Browse by season
+
+```{r}
+#| echo: false
+#| results: asis
+base_dir <- "."
+
+season_dirs <- list.dirs(base_dir, recursive = FALSE, full.names = FALSE)
+season_dirs <- season_dirs[grepl("^Season\\s+\\d+$", season_dirs)]
+season_dirs <- sort(season_dirs)
+
+links <- vapply(season_dirs, function(season) {
+  path <- gsub("\\\\", "/", file.path(season, ""))
+  url <- utils::URLencode(path)
+  sprintf("## [%s](%s)", season, url)
+}, character(1))
+
+cat(paste(links, collapse = "\n"), "\n")
+```
+
+<!-- ## [Season 25-26](Season%202526/) -->
+::::
