@@ -1,0 +1,49 @@
+---
+title: "Season 25-26"
+theme: 
+        - slate
+        
+type: grid 
+image: /Images/Social_profile.jpg
+
+format:
+  html:
+    smooth-scroll: true
+    link-external-newwindow: true
+    logo: https://anfieldindex.com/wp-content/uploads/2016/09/AI-Under-Pressure.png
+    nav-buttons: 
+                  - icon: github
+                    href: https://github.com/Barts78
+                  - icon: linkedin
+                    href: https://www.linkedin.com/in/phil-barter-55500122/
+                  - icon: twitter
+                    href: https://twitter.com/Barts78
+                  - icon: bluesky
+                    href: https://bsky.app/profile/barts78.bsky.social
+
+
+---
+
+
+```{r}
+#| echo: false
+#| results: asis
+base_dir <- "."
+
+sub_dirs <- list.dirs(base_dir, recursive = FALSE, full.names = FALSE)
+sub_dirs <- sub_dirs[!grepl("^\\.", sub_dirs)]
+sub_dirs <- sub_dirs[sub_dirs != "index_files"]
+sub_dirs <- sort(sub_dirs)
+
+links <- vapply(sub_dirs, function(name) {
+  path <- gsub("\\\\", "/", file.path(name, ""))
+  url <- utils::URLencode(path)
+  sprintf("## [%s](%s)", name, url)
+}, character(1))
+
+cat(paste(links, collapse = "\n"), "\n")
+```
+
+<!-- ## [Specials](Specials/)
+## [FA Cup](FA%20Cup/)
+## [EPL](EPL/) -->

@@ -11,33 +11,39 @@ format:
     page-layout: full
 ---
 
-::: {.hero}
-::: {.hero-text}
+:::::: hero
+:::: hero-text
 # Dr Barts
 
-<p class="hero-kicker">Football Stats Hub</p>
+<p class="hero-kicker">
 
-<p class="hero-blurb">
-I am a part time football analyst specialising in the Quarto and R ecosystems.
+Football Stats Hub
+
 </p>
 
-<div class="hero-links">
-  <a class="hero-link" href="https://github.com/Barts78"><i class="bi bi-github"></i></a>
-  <a class="hero-link" href="https://twitter.com/Barts78"><i class="bi bi-twitter"></i></a>
-  <a class="hero-link" href="https://www.linkedin.com/in/phil-barter-55500122/"><i class="bi bi-linkedin"></i></a>
-  <a class="hero-link" href="https://bsky.app/profile/barts78.bsky.social"><i class="bi bi-bluesky"></i></a>
-</div>
-:::
+<p class="hero-blurb">
 
-::: {.hero-portrait}
+I am a part time football analyst specialising in the Quarto and R ecosystems.
+
+</p>
+
+::: hero-links
+<a class="hero-link" href="https://github.com/Barts78"><i class="bi bi-github"></i></a> <a class="hero-link" href="https://twitter.com/Barts78"><i class="bi bi-twitter"></i></a> <a class="hero-link" href="https://www.linkedin.com/in/phil-barter-55500122/"><i class="bi bi-linkedin"></i></a> <a class="hero-link" href="https://bsky.app/profile/barts78.bsky.social"><i class="bi bi-bluesky"></i></a>
+:::
+::::
+
+::: hero-portrait
 ![](Images/Social_profile.png){.hero-avatar}
 :::
+::::::
+
+:::: bio-card
+::: bio-title
+<b>Bio</b>
 :::
 
-::: {.bio-card}
-<div class="bio-title"><b>Bio</b></div>
 This is a home for my football visualisation work across **AI UP** and **TMM** pods.
-:::
+::::
 
 ## Browse by season
 
