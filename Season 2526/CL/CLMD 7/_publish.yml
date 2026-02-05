@@ -1,0 +1,12 @@
+- source: CL Match day 5 Dashboard.qmd
+  quarto-pub:
+    - id: b0f2ce41-1f49-4906-9582-ac7799d07a05
+      url: https://drbarts.quarto.pub/cl-match-day-5-season-2526
+- source: CL Match day 6 Dashboard.qmd
+  quarto-pub:
+    - id: 7e468531-84fb-4d41-85fa-0bc185e31f6f
+      url: https://drbarts.quarto.pub/cl-match-day-6-season-2526
+- source: CL Match day 7 Dashboard.qmd
+  quarto-pub:
+    - id: 798f5b7b-411f-4c32-a073-341a17ad4e04
+      url: https://drbarts.quarto.pub/cl-match-day-7-season-2526

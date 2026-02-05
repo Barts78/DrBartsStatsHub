@@ -1,0 +1,4 @@
+- source: CL Match day 3 Dashboard.qmd
+  quarto-pub:
+    - id: 930b8da9-e6a8-4011-ae96-2f7039990894
+      url: https://drbarts.quarto.pub/cl-match-day-3-season-2526

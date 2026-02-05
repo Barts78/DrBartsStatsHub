@@ -1,0 +1,4 @@
+- source: CL Match day 1 Dashboard.qmd
+  quarto-pub:
+    - id: ed6d6df1-53da-4bff-a61a-85a14dccde07
+      url: https://drbarts.quarto.pub/cl-match-day-1-season-2526
