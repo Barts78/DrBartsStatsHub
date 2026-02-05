@@ -54,44 +54,91 @@ This is a home for my football visualisation work across **AI UP** and **TMM** p
 
 base_dir <- "."
 
-# Directories we NEVER want as competition cards
-exclude_dirs <- c(
-  "Images", "images", "bigrams", "data", "Data", "R", "scripts",
-  "_extensions", "_site", "_cache", "_freeze",
-  "index_files", "site_libs"
-)
-
-# Get subdirectories (competitions)
-comp_dirs <- list.dirs(base_dir, recursive = FALSE, full.names = FALSE)
-
-# Keep only "real" folders
-comp_dirs <- comp_dirs[!grepl("^\\.", comp_dirs)]                # no hidden dirs
-comp_dirs <- comp_dirs[!comp_dirs %in% exclude_dirs]             # remove non-competitions
-comp_dirs <- comp_dirs[!grepl("^Season\\s+\\d+$", comp_dirs)]     # optional: exclude Season folders
-comp_dirs <- sort(comp_dirs)
-
-# ---- Thumbnail map (folder name -> image path) ----
-thumb_map <- c(
-  "EPL"      = "Images/EPL.png",
-  "FA Cup"   = "Images/FA_Cup.png",
-  "CL"      = "Images/UCL.png",
-  "League Cup"  = "Images/League_cup.png",
-  "Specials" = "Images/Premier-League-ball.png"
-)
+md_dirs <- list.dirs(base_dir, recursive = FALSE, full.names = FALSE)
+md_dirs <- md_dirs[grepl("^MD\\s+\\d+$", md_dirs)]
+md_dirs <- md_dirs[order(as.numeric(sub("^MD\\s+", "", md_dirs)))]
 
 default_thumb <- "Images/Premier-League-ball.png"
 
-pick_thumb <- function(comp_name) {
-  thumb <- unname(thumb_map[comp_name])   # returns NA if not found
-  if (is.na(thumb) || length(thumb) == 0) default_thumb else thumb
+pick_md_thumb <- function(md, base_dir = ".") {
+
+  # extract MD number (e.g. "MD 12" -> 12)
+  md_num <- sub("^MD\\s+", "", md)
+
+  thumb_path <- file.path(
+    base_dir,
+    md,
+    "docs",
+    paste0("Match-day-", md_num, "-Dashboard_files"),
+    "figure-html",
+    "Match Result Probablity Plot-1.png"
+  )
+
+  thumb_path <- gsub("\\\\", "/", thumb_path)
+
+  if (file.exists(thumb_path)) {
+    thumb_path
+  } else {
+    "Images/Premier-League-ball.png"   # fallback
+  }
 }
 
-# Build cards
-cards <- vapply(comp_dirs, function(comp) {
-  path <- gsub("\\\\", "/", file.path(comp, "")) # "EPL/"
-  url  <- utils::URLencode(path)
+#pick_thumb <- function(md) {
+#  thumb <- unname(thumb_map[md])
+#  if (is.na(thumb) || length(thumb) == 0) default_thumb else thumb
+#}
 
-  thumb <- pick_thumb(comp)
+# Extract a nice subtitle from the HTML itself
+extract_subtitle <- function(html_path) {
+  x <- tryCatch(readLines(html_path, warn = FALSE, encoding = "UTF-8"), error = function(e) character(0))
+  if (!length(x)) return("Open matchday dashboard")
+
+  txt <- paste(x, collapse = "\n")
+
+  # 1) <title>...</title>
+  m <- regexpr("(?is)<title>\\s*([^<]+?)\\s*</title>", txt, perl = TRUE)
+  if (m[1] != -1) {
+    title <- sub("(?is).*<title>\\s*([^<]+?)\\s*</title>.*", "\\1", regmatches(txt, m), perl = TRUE)
+
+    # Clean common suffixes
+    title <- gsub("\\s*\\|\\s*.*$", "", title)         # remove "| Site Name"
+    title <- gsub("\\s*-\\s*Quarto$", "", title)       # remove "- Quarto"
+    title <- trimws(title)
+
+    if (nzchar(title)) return(title)
+  }
+
+  # 2) Fallback: first <h1>...</h1>
+  m2 <- regexpr("(?is)<h1[^>]*>\\s*([^<]+?)\\s*</h1>", txt, perl = TRUE)
+  if (m2[1] != -1) {
+    h1 <- sub("(?is).*<h1[^>]*>\\s*([^<]+?)\\s*</h1>.*", "\\1", regmatches(txt, m2), perl = TRUE)
+    h1 <- trimws(h1)
+    if (nzchar(h1)) return(h1)
+  }
+
+  "Open matchday dashboard"
+}
+
+cards <- vapply(md_dirs, function(md) {
+
+  docs_dir <- file.path(base_dir, md, "docs")
+  if (!dir.exists(docs_dir)) return(NA_character_)
+
+  html_files <- list.files(docs_dir, pattern = "\\.html$", full.names = FALSE)
+  if (length(html_files) == 0) return(NA_character_)
+
+  html_file <- sort(html_files)[1]
+
+  # Link URL (relative)
+  rel_path <- file.path(md, "docs", html_file)
+  rel_path <- gsub("\\\\", "/", rel_path)
+  url <- utils::URLencode(rel_path)
+
+  # Subtitle from HTML contents
+  full_html_path <- file.path(docs_dir, html_file)
+  subtitle <- extract_subtitle(full_html_path)
+
+  thumb <- pick_md_thumb(md)
 
   sprintf(
     paste0(
@@ -102,14 +149,16 @@ cards <- vapply(comp_dirs, function(comp) {
       '    </div>\n',
       '    <div class="card-body">\n',
       '      <h3><a href="%s">%s</a></h3>\n',
-      '      <div class="text-muted">Browse dashboards &amp; visuals</div>\n',
+      '      <div class="text-muted">%s</div>\n',
       '    </div>\n',
       '  </div>\n',
       '</div>\n'
     ),
-    thumb, comp, url, comp
+    thumb, md, url, md, htmltools::htmlEscape(subtitle)
   )
 }, character(1))
+
+cards <- cards[!is.na(cards)]
 
 output <- paste0(
   '<div class="grid">\n',
