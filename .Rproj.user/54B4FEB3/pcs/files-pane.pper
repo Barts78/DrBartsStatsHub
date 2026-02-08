@@ -1,9 +1,13 @@
 {
     "sortOrder": [
         {
+            "columnIndex": 4,
+            "ascending": false
+        },
+        {
             "columnIndex": 2,
             "ascending": true
         }
     ],
-    "path": "~/Documents/Dropbox files/AI lfc data/R files/DrBartsHubPage/DrBartsStatsHub/Season 2324"
+    "path": "~/Documents/Dropbox files/AI lfc data/R files/AI UP/Scripts/Python/fotmob"
 }
