@@ -69,7 +69,7 @@ pick_md_thumb <- function(md, base_dir = ".") {
     base_dir,
     md,
     "docs",
-    paste0("FAC-Match-day-", md_num, "-Dashboard_files"),
+    paste0("-Match-day-", md_num, "-Dashboard_files"),
     "figure-html",
     "Match Result Probablity Plot-1.png"
   )
