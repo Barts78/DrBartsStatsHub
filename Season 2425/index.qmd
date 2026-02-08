@@ -1,0 +1,123 @@
+---
+title: "Dr Barts"
+subtitle: "Season 24-25"
+image: Images/Social_profile.png
+
+format:
+  html:
+    theme:
+      - litera
+      - Matchdash.scss
+    page-layout: full
+---
+
+:::::: hero
+:::: hero-text
+# Dr Barts
+
+<p class="hero-kicker">
+
+Football Stats Hub
+
+</p>
+
+<p class="hero-blurb">
+
+I am a part time football analyst specialising in the Quarto and R ecosystems.
+
+</p>
+
+::: hero-links
+<a class="hero-link" href="https://github.com/Barts78"><i class="bi bi-github"></i></a> <a class="hero-link" href="https://twitter.com/Barts78"><i class="bi bi-twitter"></i></a> <a class="hero-link" href="https://www.linkedin.com/in/phil-barter-55500122/"><i class="bi bi-linkedin"></i></a> <a class="hero-link" href="https://bsky.app/profile/barts78.bsky.social"><i class="bi bi-bluesky"></i></a>
+:::
+::::
+
+::: hero-portrait
+![](Images/Social_profile.png){.hero-avatar}
+:::
+::::::
+
+:::: bio-card
+::: bio-title
+<b>Bio</b>
+:::
+
+This is a home for my football visualisation work across **AI UP** and **TMM** pods.
+::::
+## Browse by Competition
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
+base_dir <- "."
+
+# Directories we NEVER want as competition cards
+exclude_dirs <- c(
+  "Images", "images", "bigrams", "data", "Data", "R", "scripts",
+  "_extensions", "_site", "_cache", "_freeze",
+  "index_files", "site_libs"
+)
+
+# Get subdirectories (competitions)
+comp_dirs <- list.dirs(base_dir, recursive = FALSE, full.names = FALSE)
+
+# Keep only "real" folders
+comp_dirs <- comp_dirs[!grepl("^\\.", comp_dirs)]                # no hidden dirs
+comp_dirs <- comp_dirs[!comp_dirs %in% exclude_dirs]             # remove non-competitions
+comp_dirs <- comp_dirs[!grepl("^Season\\s+\\d+$", comp_dirs)]     # optional: exclude Season folders
+comp_dirs <- sort(comp_dirs)
+
+# ---- Thumbnail map (folder name -> image path) ----
+thumb_map <- c(
+  "EPL"      = "Images/EPL.png",
+  "FA Cup"   = "Images/FA_Cup.png",
+  "CL"      = "Images/UCL.png",
+  "League Cup"  = "Images/League_cup.png",
+  "Specials" = "Images/Premier-League-ball.png"
+)
+
+default_thumb <- "Images/Premier-League-ball.png"
+
+pick_thumb <- function(comp_name) {
+  thumb <- unname(thumb_map[comp_name])   # returns NA if not found
+  if (is.na(thumb) || length(thumb) == 0) default_thumb else thumb
+}
+
+# Build cards
+cards <- vapply(comp_dirs, function(comp) {
+  path <- gsub("\\\\", "/", file.path(comp, "")) # "EPL/"
+  url  <- utils::URLencode(path)
+
+  thumb <- pick_thumb(comp)
+
+  sprintf(
+    paste0(
+      '<div class="g-col-12 g-col-md-6 g-col-lg-4">\n',
+      '  <div class="card season-card">\n',
+      '    <div class="season-card-media">\n',
+      '      <img src="%s" class="card-img-top img-fluid" alt="%s thumbnail">\n',
+      '    </div>\n',
+      '    <div class="card-body">\n',
+      '      <h3><a href="%s">%s</a></h3>\n',
+      '      <div class="text-muted">Browse dashboards &amp; visuals</div>\n',
+      '    </div>\n',
+      '  </div>\n',
+      '</div>\n'
+    ),
+    thumb, comp, url, comp
+  )
+}, character(1))
+
+output <- paste0(
+  '<div class="grid">\n',
+  paste(cards, collapse = "\n"),
+  "\n</div>\n"
+)
+
+knitr::asis_output(output)
+```
+<!-- ## [Specials](Specials/)
+## [FA Cup](FA%20Cup/)
+## [EPL](EPL/) -->
