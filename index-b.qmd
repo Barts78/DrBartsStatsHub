@@ -58,7 +58,7 @@ user <- "barts78"
 season_repos <- c(
   "Season 2324" = "DrBarts2324",
   "Season 2425" = "DrBarts2425",
-  "Season 2526" = "DrBarts2526"
+  "Season 2526" = "DrBartsStatsHub"
 )
 
 # Optional: per-season thumbnails (fallback if not provided)
@@ -91,7 +91,7 @@ cards <- vapply(seq_along(season_names), function(i) {
   url <- sprintf("https://%s.github.io/%s/", user, repo)
 
   # If instead you keep a "Season xx/" folder inside each repo, use this:
- url <- sprintf("https://%s.github.io/%s/%s/", user, repo, utils::URLencode(season))
+  url <- sprintf("https://%s.github.io/%s/%s/", user, repo, utils::URLencode(season))
 
   thumb <- pick_thumb(season)
 
