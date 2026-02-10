@@ -42,7 +42,7 @@ I am a part time football analyst specialising in the Quarto and R ecosystems.
 <b>Bio</b>
 :::
 
-This is a home for my football visualisation work across **AI UP** and **TMM** pods.
+This is a home for my football visualisation work across **AI UP** and **TMM** pods  for **Season**   **2024 - 2025**
 ::::
 ## Browse by Competition
 
