@@ -58,7 +58,8 @@ user <- "barts78"
 season_repos <- c(
   "Season 2324" = "DrBarts2324",
   "Season 2425" = "DrBarts2425",
-  "Season 2526" = "DrBarts2526"
+  "Season 2526" = "DrBarts2526",
+  "Season 2526" = "DrBarts2627"
 )
 
 # Optional: per-season thumbnails (fallback if not provided)
@@ -66,7 +67,8 @@ default_thumb <- "Images/Premier-League-ball.png"
 
 thumb_map <- c(
   "Season 25" = "Images/Season25.png",
-  "Season 26" = "Images/Season26.png"
+  "Season 26" = "Images/Season26.png",
+  "Season 27" = "Images/Season26.png"
 )
 
 pick_thumb <- function(season) {
