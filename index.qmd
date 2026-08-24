@@ -59,7 +59,7 @@ season_repos <- c(
   "Season 2324" = "DrBarts2324",
   "Season 2425" = "DrBarts2425",
   "Season 2526" = "DrBarts2526",
-  "Season 2526" = "DrBarts2627"
+  "Season 2627" = "DrBarts2627"
 )
 
 # Optional: per-season thumbnails (fallback if not provided)
