@@ -1,0 +1,4 @@
+GET https://understat.com/league/EPL/2024 | status=200 | characters=18688
+Contains datesData: FALSE
+ERROR: Could not locate datesData JSON.parse payload
+If parsing failed, share stage5_results.txt; no bulk requests were made.

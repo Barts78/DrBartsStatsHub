@@ -1,0 +1,15 @@
+league,season,metric,status,n_players,stat_label,error,columns
+Ligue 1,2024/2025,xg,UNAVAILABLE,0,NA,Expected goals (xG): 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,xgot,UNAVAILABLE,0,NA,Expected goals on target (xGOT): 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | Expected goals on target: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | xGOT: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,goals,UNAVAILABLE,0,NA,Goals: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,shots,UNAVAILABLE,0,NA,Total shots: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | Shots: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,shots_on_target,UNAVAILABLE,0,NA,Shots on target: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,minutes,UNAVAILABLE,0,NA,Minutes played: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Ligue 1,2024/2025,big_chances_missed,UNAVAILABLE,0,NA,Big chances missed: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,xg,UNAVAILABLE,0,NA,Expected goals (xG): 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,xgot,UNAVAILABLE,0,NA,Expected goals on target (xGOT): 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | Expected goals on target: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | xGOT: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,goals,UNAVAILABLE,0,NA,Goals: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,shots,UNAVAILABLE,0,NA,Total shots: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR' | Shots: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,shots_on_target,UNAVAILABLE,0,NA,Shots on target: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,minutes,UNAVAILABLE,0,NA,Minutes played: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA
+Premier League,2024/2025,big_chances_missed,UNAVAILABLE,0,NA,Big chances missed: 'fotmob_get_season_stats' is not an exported object from 'namespace:worldfootballR',NA

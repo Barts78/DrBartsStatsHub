@@ -1,0 +1,164 @@
+UNDER PRESSURE - DATA EXTRACTION DIAGNOSTICS
+Run time: 2026-10-20 06:34:23 +04 
+R version: R version 4.5.2 (2025-10-31) 
+
+PACKAGE: worldfootballR 
+Version: 0.6.8.1 
+Exported FotMob / Understat functions:
+understat_match_stats
+understat_match_shots
+understat_available_teams
+understat_player_shots
+understat_team_season_shots
+understat_league_season_shots
+understat_team_players_stats
+understat_match_players
+load_understat_league_shots
+understat_team_meta
+understat_league_match_results
+understat_team_stats_breakdown 
+
+FUNCTION: understat_match_stats 
+ARGUMENTS: match_url 
+DEFAULTS:
+$match_url
+
+
+
+FUNCTION: understat_match_shots 
+ARGUMENTS: match_url 
+DEFAULTS:
+$match_url
+
+
+
+FUNCTION: understat_available_teams 
+ARGUMENTS: leagues 
+DEFAULTS:
+$leagues
+
+
+
+FUNCTION: understat_player_shots 
+ARGUMENTS: player_url 
+DEFAULTS:
+$player_url
+
+
+
+FUNCTION: understat_team_season_shots 
+ARGUMENTS: team_url 
+DEFAULTS:
+$team_url
+
+
+
+FUNCTION: understat_league_season_shots 
+ARGUMENTS: league, season_start_year 
+DEFAULTS:
+$league
+
+
+$season_start_year
+
+
+
+FUNCTION: understat_team_players_stats 
+ARGUMENTS: team_url 
+DEFAULTS:
+$team_url
+
+
+
+FUNCTION: understat_match_players 
+ARGUMENTS: match_url 
+DEFAULTS:
+$match_url
+
+
+
+FUNCTION: load_understat_league_shots 
+ARGUMENTS: league 
+DEFAULTS:
+$league
+
+
+
+FUNCTION: understat_team_meta 
+ARGUMENTS: team_names 
+DEFAULTS:
+$team_names
+
+
+
+FUNCTION: understat_league_match_results 
+ARGUMENTS: league, season_start_year 
+DEFAULTS:
+$league
+
+
+$season_start_year
+
+
+
+FUNCTION: understat_team_stats_breakdown 
+ARGUMENTS: team_urls 
+DEFAULTS:
+$team_urls
+
+
+
+PACKAGE: httr 
+Version: 1.4.8 
+PACKAGE: httr2 
+Version: 1.2.2 
+PACKAGE: jsonlite 
+Version: 2.0.0 
+PACKAGE: dplyr 
+Version: 1.2.1 
+PACKAGE: purrr 
+Version: 1.2.2 
+SESSION INFORMATION:
+R version 4.5.2 (2025-10-31)
+Platform: aarch64-apple-darwin20
+Running under: macOS Tahoe 26.6.2
+
+Matrix products: default
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: Indian/Mauritius
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] rlang_1.2.0         openxlsx_4.2.8.1    ggshakeR_0.2.0.9002 writexl_1.5.4       readxl_1.5.0        data.table_1.18.4  
+ [7] lubridate_1.9.5     forcats_1.0.1       stringr_1.6.0       dplyr_1.2.1         purrr_1.2.2         readr_2.2.0        
+[13] tidyr_1.3.2         tibble_3.3.1        ggplot2_4.0.3       tidyverse_2.0.0    
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.2.1          farver_2.1.2              S7_0.2.2                  warp_0.2.3               
+ [5] fastmap_1.2.0             tweenr_2.0.3              janitor_2.2.1             promises_1.5.0           
+ [9] digest_0.6.39             timechange_0.4.0          lifecycle_1.0.5           processx_3.9.0           
+[13] magrittr_2.0.5            compiler_4.5.2            progress_1.2.3            tools_4.5.2              
+[17] utf8_1.2.6                qdapRegex_0.7.10          knitr_1.51                prettyunits_1.2.0        
+[21] bit_4.6.0                 curl_7.1.0                xml2_1.5.2                TTR_0.24.4               
+[25] RColorBrewer_1.1-3        rsconnect_1.8.0           websocket_1.4.4           withr_3.0.2              
+[29] grid_4.5.2                polyclip_1.10-7           xts_0.14.2                paletteer_1.7.0          
+[33] scales_1.4.0              MASS_7.3-65               cli_3.6.6                 slider_0.3.3             
+[37] crayon_1.5.3              generics_0.1.4            otel_0.2.0                rstudioapi_0.18.0        
+[41] httr_1.4.8                tzdb_0.5.0                ggforce_0.5.0             chromote_0.5.1           
+[45] worldfootballR_0.6.8.0001 parallel_4.5.2            rvest_1.0.5               selectr_0.5-1            
+[49] cellranger_1.1.0          vctrs_0.7.3               jsonlite_2.0.0            hms_1.1.4                
+[53] bit64_4.8.0               ggrepel_0.9.8             ggsoccer_0.2.0            glue_1.8.1               
+[57] rematch2_2.1.2            ggtext_0.1.2              stringi_1.8.7             gtable_0.3.6             
+[61] later_1.4.8               pillar_1.11.1             rappdirs_0.3.4            htmltools_0.5.9          
+[65] httr2_1.2.2               R6_2.6.1                  vroom_1.7.1               evaluate_1.0.5           
+[69] lattice_0.22-9            gridtext_0.1.6            snakecase_0.11.1          Rcpp_1.1.1-1.1           
+[73] zip_2.3.3                 gridExtra_2.3             xfun_0.57                 zoo_1.8-15               
+[77] pkgconfig_2.0.3          

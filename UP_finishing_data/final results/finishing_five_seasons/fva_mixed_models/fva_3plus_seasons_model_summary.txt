@@ -1,0 +1,32 @@
+Linear mixed model fit by REML ['lmerMod']
+Formula: y ~ season_factor + (1 | player_id)
+   Data: z
+Weights: w
+Control: ctrl
+
+REML criterion at convergence: -1324.8
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-2.31579 -0.65565 -0.05977  0.59197  2.81302 
+
+Random effects:
+ Groups    Name        Variance  Std.Dev.
+ player_id (Intercept) 3.835e-05 0.006193
+ Residual              7.249e-04 0.026923
+Number of obs: 314, groups:  player_id, 87
+
+Fixed effects:
+                         Estimate Std. Error t value
+(Intercept)            -0.0030839  0.0037819  -0.815
+season_factor2022-2023 -0.0014793  0.0049885  -0.297
+season_factor2023-2024  0.0019814  0.0046909   0.422
+season_factor2024-2025  0.0054230  0.0048303   1.123
+season_factor2025-2026 -0.0003262  0.0052884  -0.062
+
+Correlation of Fixed Effects:
+            (Intr) s_2022 s_2023 s_2024
+s_2022-2023 -0.729                     
+s_2023-2024 -0.781  0.589              
+s_2024-2025 -0.760  0.572  0.615       
+s_2025-2026 -0.695  0.521  0.561  0.550

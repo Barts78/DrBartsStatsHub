@@ -1,0 +1,5 @@
+key,endpoint,league_id,http_status,top_level_keys,error
+epl_league,leagues,47,404,NA,"<!DOCTYPE html><html lang=""en"" dir=""ltr""><head><meta name=""apple-itunes-app"" content=""app-id=488575683"" data-next-head=""""/><link rel=""alternate"" href=""android-a"
+ligue1_league,leagues,53,404,NA,"<!DOCTYPE html><html lang=""en"" dir=""ltr""><head><meta name=""apple-itunes-app"" content=""app-id=488575683"" data-next-head=""""/><link rel=""alternate"" href=""android-a"
+epl_deepstats,leagueseasondeepstats,47,404,NA,"<!DOCTYPE html><html lang=""en"" dir=""ltr""><head><meta name=""apple-itunes-app"" content=""app-id=488575683"" data-next-head=""""/><link rel=""alternate"" href=""android-a"
+ligue1_deepstats,leagueseasondeepstats,53,404,NA,"<!DOCTYPE html><html lang=""en"" dir=""ltr""><head><meta name=""apple-itunes-app"" content=""app-id=488575683"" data-next-head=""""/><link rel=""alternate"" href=""android-a"

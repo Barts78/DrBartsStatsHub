@@ -1,0 +1,44 @@
+UNDER PRESSURE STAGE 6 | 2026-10-18 11:02:20
+URL: https://understat.com/league/EPL/2024
+HTTP status: 200
+Final URL: https://understat.com/league/EPL/2024
+Content type: text/html; charset=UTF-8
+Character count: 18688
+Page title: EPL xG Table and Scorers for the 2024/2025 season | Understat.com
+Contains datesData: FALSE
+Contains JSON.parse: TRUE
+Contains __NEXT_DATA__: FALSE
+Contains fixtures/results terms: TRUE
+Contains access-block indicators: FALSE
+Number of script tags: 27
+Script src paths (first 20):
+  https://sdk.adlook.tech/inventory/core.js
+  //ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js
+  //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  //code.jquery.com/jquery-1.12.4.min.js
+  https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
+  https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
+  js/jquery.iframetracker.min.js?t=1765138215
+  js/timsort.min.js?t=1765138215
+  js/tooltip.min.js?t=1765138215
+  js/pagination.min.js?t=1765138215
+  js/select.min.js?t=1765138215
+  js/jquery.mousewheel.min.js?t=1765138215
+  js/modernizr.min.js?t=1765138215
+  js/simplebar.min.js?t=1765138215
+  js/typeahead.bundle.min.js?t=1765138215
+  js/jTable.min.js?t=1765138215
+  js/main.min.js?t=1765138215
+  js/alasql.min.js?t=1765138215
+  js/xlsx.core.min.js?t=1765138215
+  js/date.format.min.js?t=1765138215
+Inline script lengths: 0, 120, 0, 1104, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 497, 547, 0, 0, 0, 0
+First 300 chars of visible body text: var THEME = localStorage.getItem("theme") || 'DARK'; document.body.className = "theme-" + THEME.toLowerCase(); EPLLa ligaBundesligaSerie ALigue 1RFPL2026/20272025/20262024/20252023/20242022/20232021/20222020/20212019/20202018/20192017/20182016/20172015/20162014/2015 <div class="li-container"> <div c
+Page links containing league, match, or player (first 15):
+  league/EPL
+  league/La_liga
+  league/Bundesliga
+  league/Serie_A
+  league/Ligue_1
+  league/RFPL
+Page inspection completed.

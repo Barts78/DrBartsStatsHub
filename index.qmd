@@ -44,6 +44,10 @@ I am a part time football analyst specialising in the Quarto and R ecosystems.
 :::
 
 This is a home for my football visualisation work across **AI UP** and **TMM** pods.
+
+<p class="bio-affiliation" style="margin-top:0.75rem; font-size:0.85em; color:#666;">
+Dr Phil Barter – Associate Professor, Middlesex University (Mauritius &amp; London). ORCID: <a href="https://orcid.org/0009-0005-4041-4288" target="_blank">https://orcid.org/0009-0005-4041-4288</a>. Views and analysis are my own and do not represent the university.
+</p>
 ::::
 ## Browse by Season
 

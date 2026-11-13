@@ -1,0 +1,28 @@
+UNDER PRESSURE SOURCE PROBE | 2026-10-18 10:50:53.927061
+R: 4.5.2 | worldfootballR: 0.6.8.1
+
+UNDERSTAT function arguments: league, season_start_year
+
+UNDERSTAT test: EPL, season_start_year=2024
+ERROR: second argument must be a list
+ERROR CLASS: simpleError, error, condition
+
+UNDERSTAT test: Ligue_1, season_start_year=2024
+ERROR: Check league name
+ERROR CLASS: simpleError, error, condition
+
+FOTMOB test: epl_league
+HTTP STATUS: 404; bytes: 210302
+TOP-LEVEL JSON KEYS: NA
+
+FOTMOB test: ligue1_league
+HTTP STATUS: 404; bytes: 210302
+TOP-LEVEL JSON KEYS: NA
+
+FOTMOB test: epl_deepstats
+HTTP STATUS: 404; bytes: 210302
+TOP-LEVEL JSON KEYS: NA
+
+FOTMOB test: ligue1_deepstats
+HTTP STATUS: 404; bytes: 210302
+TOP-LEVEL JSON KEYS: NA

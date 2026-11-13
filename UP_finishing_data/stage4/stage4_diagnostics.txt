@@ -1,0 +1,57 @@
+UNDER PRESSURE STAGE 4 | 2026-10-18 10:57:57.981104
+worldfootballR version: 0.6.8.1
+
+===== .understat_shooting =====
+{
+    main_url <- "https://understat.com/"
+    games <- .get_clean_understat_json(page_url = type_url, script_name = "datesData") %>% dplyr::filter(.data[["isResult"]])
+    match_urls <- paste0(main_url, "match/", games$id)
+    shots_data <- data.frame()
+    for (each_match in match_urls) {
+        Sys.sleep(round(runif(1, 1, 2)))
+        tryCatch(df <- .get_clean_understat_json(page_url = each_match, script_name = "shotsData"), error = function(e) data.frame())
+        if (nrow(df) == 0) {
+            print(glue::glue("Shots data for match_url {each_match} not available"))
+        }
+        shots_data <- rbind(shots_data, df)
+    }
+    return(shots_data)
+}
+
+===== .get_understat_json =====
+{
+    tryCatch(httr::GET(page_url, httr::set_cookies(.cookies = c(beget = "begetok"))) %>% httr::content(), error = function(e) NA)
+}
+
+===== .get_clean_understat_json =====
+{
+    page <- .get_understat_json(page_url)
+    out_df <- data.frame()
+    if (!is.na(page)) {
+        clean_json <- page %>% rvest::html_nodes("script") %>% as.character()
+        clean_json <- clean_json[grep(script_name, clean_json)] %>% stringi::stri_unescape_unicode()
+        clean_json <- qdapRegex::rm_square(clean_json, extract = TRUE, include.markers = TRUE) %>% unlist() %>% stringr::str_subset("\\[\\]", 
+            negate = TRUE)
+        out_df <- lapply(clean_json, jsonlite::fromJSON) %>% do.call("rbind", .)
+        if (!any(grepl("season", colnames(out_df)))) {
+            season_element <- page %>% rvest::html_nodes(xpath = "//*[@name=\"season\"]") %>% rvest::html_nodes("option")
+            season_element <- season_element[grep("selected", season_element)]
+            season <- season_element %>% rvest::html_text()
+            out_df <- cbind(season, out_df)
+        }
+        out_df <- do.call(data.frame, out_df)
+    }
+    return(out_df)
+}
+
+===== Understat public page test =====
+HTTP: 200 | bytes: 18688
+Contains shotsData: FALSE
+Contains JSON.parse: TRUE
+Contains Cloudflare challenge: FALSE
+First 150 chars: <!DOCTYPE html> <html lang="en">     <head> 		<base href="https://understat.com/"> 		<title>EPL xG Table and Scorers for the 2024/2025 season | Unders
+Script tags: 27 | embedded data candidates: 0
+
+===== Direct extraction with traceback =====
+ERROR: second argument must be a list
+NOTE: Error handled; inspect function bodies above for incompatible jsonlite calls.

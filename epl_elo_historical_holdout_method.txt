@@ -1,0 +1,14 @@
+UNDER PRESSURE — PREMIER LEAGUE ELO HISTORICAL HOLDOUT
+Source: Football-Data.co.uk (not a direct Premier League website export)
+Warm-up: 2013/14–2015/16; training: 2016/17–2020/21; test: 2021/22–2025/26
+Training matches: 1900; test matches: 1900
+Fitted probability home adjustment: 46.53 Elo points
+Fitted draw weight: 0.6805
+Fitted Elo scale: 276.34
+Test observed H/D/A: 0.442 / 0.239 / 0.319
+Test predicted H/D/A: 0.451 / 0.226 / 0.323
+Test mean home-points residual: -0.0162
+CAVEAT: 2019/20–2020/21 calibration includes spectator restrictions.
+CAVEAT: intervals bootstrap matches but do not incorporate fitted-model uncertainty.
+CAVEAT: team is a stadium proxy; account for stadium moves (e.g., Everton).
+CAVEAT: this is a predictive residual, not a causal estimate of crowd noise.

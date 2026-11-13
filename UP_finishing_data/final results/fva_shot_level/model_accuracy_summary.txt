@@ -1,0 +1,41 @@
+Generalized linear mixed model fit by maximum likelihood (Adaptive
+  Gauss-Hermite Quadrature, nAGQ = 0) [glmerMod]
+ Family: binomial  ( logit )
+Formula: on_target_unblocked ~ xg_logit + shot_type + situation + season +  
+    (1 | player) + (1 | player_season) + (1 | match)
+   Data: x
+Control: gctl
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+  33120.4   33268.0  -16542.2   33084.4     26900 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.5218 -0.7248 -0.5685  1.0384  4.0106 
+
+Random effects:
+ Groups        Name        Variance  Std.Dev.
+ match         (Intercept) 0.0018389 0.04288 
+ player_season (Intercept) 0.0003398 0.01843 
+ player        (Intercept) 0.0086533 0.09302 
+Number of obs: 26918, groups:  match, 1889; player_season, 593; player, 152
+
+Fixed effects:
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)               0.748167   0.075223   9.946  < 2e-16 ***
+xg_logit                  0.512516   0.012346  41.514  < 2e-16 ***
+shot_typeLeftFoot         0.072113   0.045337   1.591  0.11170    
+shot_typeOtherBodyParts  -0.098255   0.240810  -0.408  0.68326    
+shot_typeRightFoot        0.172425   0.043095   4.001 6.31e-05 ***
+situationFreeKick        -0.268467   0.090287  -2.973  0.00294 ** 
+situationFromCorner      -0.372646   0.067236  -5.542 2.98e-08 ***
+situationIndividualPlay  -0.854467   0.276858  -3.086  0.00203 ** 
+situationRegularPlay     -0.068193   0.053385  -1.277  0.20147    
+situationSetPiece        -0.218005   0.084031  -2.594  0.00948 ** 
+situationThrowInSetPiece -0.347115   0.138300  -2.510  0.01208 *  
+season2022-2023          -0.043471   0.043796  -0.993  0.32092    
+season2023-2024          -0.003258   0.043307  -0.075  0.94003    
+season2024-2025          -0.028785   0.044137  -0.652  0.51428    
+season2025-2026          -0.069811   0.048013  -1.454  0.14594    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

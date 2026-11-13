@@ -1,0 +1,37 @@
+Linear mixed model fit by REML ['lmerMod']
+Formula: fva ~ xg_logit + shot_type + situation + season + (1 | player) +  
+    (1 | player_season) + (1 | match)
+   Data: x
+Control: ctl
+
+REML criterion at convergence: -14664.1
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.8477 -0.3959 -0.2382  0.0726  4.6478 
+
+Random effects:
+ Groups        Name        Variance  Std.Dev.
+ match         (Intercept) 2.701e-05 0.005197
+ player_season (Intercept) 4.102e-05 0.006404
+ player        (Intercept) 1.270e-05 0.003563
+ Residual                  3.362e-02 0.183360
+Number of obs: 26765, groups:  match, 1889; player_season, 593; player, 152
+
+Fixed effects:
+                           Estimate Std. Error t value
+(Intercept)              -0.0381471  0.0064312  -5.932
+xg_logit                 -0.0127646  0.0009813 -13.008
+shot_typeLeftFoot         0.0073183  0.0038016   1.925
+shot_typeOtherBodyParts   0.0265428  0.0199183   1.333
+shot_typeRightFoot        0.0115085  0.0036337   3.167
+situationFreeKick        -0.0014228  0.0076507  -0.186
+situationFromCorner      -0.0198407  0.0057098  -3.475
+situationIndividualPlay  -0.0331859  0.0191158  -1.736
+situationRegularPlay     -0.0014374  0.0046896  -0.307
+situationSetPiece        -0.0247787  0.0070837  -3.498
+situationThrowInSetPiece -0.0036231  0.0116882  -0.310
+season2022-2023          -0.0012679  0.0038333  -0.331
+season2023-2024           0.0006895  0.0037621   0.183
+season2024-2025           0.0041061  0.0038143   1.076
+season2025-2026          -0.0030979  0.0041150  -0.753
